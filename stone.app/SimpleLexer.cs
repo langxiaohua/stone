@@ -177,7 +177,7 @@ namespace stone.app
                             }
                             else
                             {
-                                InitToken(ch);
+                                state = InitToken(ch);
                             }
                             break;
                         case DfaState.Id_int1:

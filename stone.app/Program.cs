@@ -18,7 +18,14 @@ namespace stone.app
 
             //foreach (Match match in Regex.Matches(input, pattern))
             //    Console.WriteLine(match.Value);
+            SimpleCalculator.TextCalculator();
 
+            Console.ReadKey();
+        }
+
+      
+        private static void TestLexer()
+        {
             SimpleLexer lexer = new SimpleLexer();
             string script = "int age = 45;";
             SimpleTokenReader tokenReader = lexer.Tokenize(script);
@@ -29,7 +36,6 @@ namespace stone.app
             Dump(tokenReader);
             Console.ReadKey();
         }
-
         static void Dump(SimpleTokenReader tokenReader)
         {
             Console.WriteLine("text\ttype");
